@@ -4,56 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./templates/style.css">
     <title>Clinica Online</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar top">
-                <div class="top left">
-                    <p>WhatsApp: 1130275883</p> <img src="./static/img/whats.png" alt="WhatsApp">
-                </div>
-                <div class="top right">
-                    <a href="./templates/Appointments/index.html">Consultas y turnos</a>
-                </div>
+    <div class="container">
+        <header class="header nav">
+            <div class="left">
+                <ul>
+                    <li>WhatsApp: 1130275883 <img src="./static/img/whats.png" alt="WhatsApp"></li>
+                    <li><a href="./templates/Appointments/index.html">Consultas y turnos</a></li>
+                </ul>
             </div>
-            <div class="navbar button">
-                <ul id="menu-options">
+            <div class="right">
+                <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="#box">Consultas de Urgencias</a></li>
                     <li><a href="./templates/Staff/index.html">Especialidades</a></li>
                     <li><a href="">Preguntas Frecuentes</a></li>
                 </ul>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="main">
-            <div class="main left">
+        </header>
+        <main class="main">
+            <aside class="aside">
                 <h1>Clinica Online</h1>
                 <h2>Accedé a la mejor atención sin complicaciones</h2>
                 <ul>
-                    <ul>
-                        <li>Tele-Consultas Médicas</li>
+                        <li class="title">Tele-Consultas Médicas</li>
                         <li>Puede realizar consultas médicas sin moverse de su casa</li>
-                    </ul>
-                    <ul>
-                        <li>Equipo Médico Multidisciplinario</li>
+                        <li class="title">Equipo Médico Multidisciplinario</li>
                         <li>Contamos con atención en diversas especialidades</li>
-                    </ul>
-                    <ul>
-                        <li>Estudios Médicos y Diagnosticos a Domicilio</li>
+                        <li class="title">Estudios Médicos y Diagnosticos a Domicilio</li>
                         <li>Electrocardiogramas, ecografias, radiología y laboratorios</li>
-                    </ul>
-                    <ul>
-                        <a href="./templates/Staff/index.html">Leer Más</a>
-                    </ul>
+                        <li class="title-link"><a href="./templates/Staff/index.html">Leer Más</a></li>
                 </ul>
-            </div>
-            <div class="main right">
-                <img src="./static/img/doctor.png" alt="">
-            </div>
-        </div>
+            </aside >
+            <section class="section">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt beatae quas facilis facere veniam. Ad perferendis aspernatur repellat possimus temporibus doloremque aperiam itaque, quis dicta ex voluptates consequuntur quibusdam expedita.</p>
+            <img src="./static/img/doctor.png" alt="">
+            </section>
+        </main>
+    </div>
         <div class="content">
             <div class="content left">
                 <h3>¿Por que elegirnos?</h3>
@@ -88,15 +79,9 @@
                     Mail para que podamos enviar la correspondiente factura.</p>
             </div>
         </div>
-        <section>
-            
-        </section>
-        <section>
-
-        </section>
-    </main>
-    <footer>
-        <p>Derechos Reservados</p>
-    </footer>
+        <footer class="footer nav">
+            <p>Derechos Reservados</p>
+        </footer>
+    <!-- </div> -->
 </body>
 </html>

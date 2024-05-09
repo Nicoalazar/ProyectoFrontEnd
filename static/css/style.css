@@ -1,0 +1,515 @@
+/* CSS 1: Intro a CSS --------------------------------------------------- */
+
+/* “:root”, es un selector especial
+ que se utiliza principalmente 
+ para definir variables personalizadas de CSS */
+:root{
+    --bg-color:#181419;
+    --primary-color:#9f3647;
+    --secondary-color:#ffc098;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+}
+
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+/* 1.6	Eliminar la decoración de los 
+hipervínculos, agregar color y tamaño de 
+fuente a la etiqueta <h2></h2> */
+a{
+    text-decoration: none;
+}
+
+h2{
+    color:#FFF;
+    font-size: 2vw;
+}
+
+#logo{
+    font-weight: bold;
+}
+
+.search-title{
+    color: white;
+    font-size: 3vw;
+}
+
+.movie-item-img {
+    width: 200px;
+    height: 300px;
+    -o-object-fit: cover; 
+    object-fit: cover;
+} 
+/* 
+Es una forma de asegurarse de que el contenido se ajuste y se muestre
+completamente sin distorsión, recortando partes si excede las dimensiones del contenedor.
+-o-object-fit: Este prefijo era necesario para que Opera pudiera reconocer y aplicar
+la propiedad. 
+object-fit: Esta es la versión sin prefijo y es compatible con la mayoría de los
+navegadores modernos que soportan las especificaciones CSS más actualizadas. */
+
+
+/* CSS 2: Unidades de medida. Colores CSS.
+  Fondos en CSS. Fuentes y tipografías. 
+  Estilos para textos y listas. Íconos ---------------------------------------------------*/
+
+/* Se incorporó en el index.html los links para referenciar fuente externa. */
+/* Se agregó la etiqueta <link> que se utiliza para especificar el ícono
+(favicon) que se muestra en la pestaña del navegador o en la barra de direcciones */
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Estilo que se usrá desde js para que al recorrer la página 
+el encabezado cambie de color */
+.scrolled{
+    background-color: var(--third-color);
+}
+
+#banner{
+    background-image: url('../img/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+}
+
+/* 
+CSS 3 – PLAN DE ESTUDIOS: Modelo de caja y 
+posicionamiento. Modelo de caja y propiedades.
+Posicionamiento y visualización.  */
+
+/* Estilo al encabezado, agregar estilos por el selector de clase:
+color de fondo, color fuente, posición del 
+encabezado, ancho y z-index -------------------------------------------*/
+.header{
+    background-color: transparent;
+    color:#FFF; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.btn-cac{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color:#FFF;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Alinea al centro el botón de registrarse */
+.card-banner{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 160px;
+}
+
+
+.input-search {
+    background-color: var(--bg-input-color);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    padding: 0px 20px;
+    width: 70%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.movie-item-detail {
+    bottom: -100%;
+    padding: 30px;
+    max-height: 100%;
+    overflow-y: auto;
+    line-height: 15px;
+    position: absolute;
+    background-color: var(--third-bis-color);
+    box-sizing: border-box;
+    transition: bottom 0.4s ease-in-out;
+    width: 100%;
+}
+
+.movie-item-detail-title {
+    color: white;
+    margin: 5px 0px 0px 0px;
+}
+  
+.movie-item-detail-subtitle {
+    color: white;
+    font-size: 8px;
+    margin: 3px 0px;
+}
+
+#top-rated{
+    margin: 50px 0px;
+}
+/* 
+<!-- Info de las películas mismo formato para todas --> */
+.movie-item-v2{
+    border-radius: 20px;
+    width: 170px;    
+    min-width: 170px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+    
+}
+
+.wrapper {
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    width: 100%;
+    min-height: calc(150px*1.5);
+    height: calc(150px*1.5);
+    overflow: hidden;
+}
+
+.movie-item-img-v2 {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.movie-item-detail-v2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.movie-item-detail-title-v2 {
+    color: white;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+}
+
+.movie-item-detail-subtitle-v2 {
+    color: white;
+    font-size: 12px;
+    margin: 3px 0px;
+}
+
+/* CSS 4 - Selectores avanzados y Animaciones. Selectores avanzados. 
+Animaciones con CSS. Incorporación de transformaciones y transiciones
+ a elementos. Introducción Responsive Web Design.  --------------------------------*/
+#logo a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Al pasar el cursor sobre el elemento #logo, se activa una
+animación que produce un efecto visual de sacudida y giro
+repetitivo, mejorando la interacción visual cuando se interactúa con ese elemento. */
+ #logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:#FFF;
+}
+
+.nav-links a:hover{
+    color: var(--secondary-color) ;
+}
+
+.btn-cac:hover{
+    color:var(--secondary-color)!important;
+    border: 2px solid var(--secondary-color);
+}
+
+.card-banner h1{
+    color:#FFF;
+    font-size: 4vw;
+}
+.card-banner h2{
+    margin-bottom: 20px;
+}
+
+
+
+#popular,#top-rated {
+    text-align: center;
+}
+
+#popular h2,#top-rated h2{
+    margin: 30px 0px;
+}
+
+.movie-item{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 450ms;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+}
+
+/* Efecto que ocurre al pasar el cursor sube una ventana en 
+cada imagen de cada película y muestra los detalles */
+.movie-item:hover{
+    opacity: 0.9;
+}
+
+.movie-item:hover .movie-item-detail {
+    bottom: 0;
+} */
+ 
+/* Agrega una estrella al lado del subtitulo */
+.movie-item-detail-subtitle::after{
+    content: '🌟';
+}
+
+
+#footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color:var(--secondary-color);
+}
+
+/* Estilos a los nombres de las películas que 
+están en la sección  */
+.movie-item-detail-title-v2:hover {
+    color: var(--primary-color);
+}
+
+
+/* CSS 5. Flexbox. Media Queries. ¿Qué es Flexbox?
+Propiedades para el contenedor Flex, y los Flex items ---------------------*/
+#footer {
+    align-items: center;
+    background-color: var(--third-color);
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+#search{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h2{
+        font-size: 3vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 400px;
+    }
+    #search{
+        height: 200px;
+    }
+    .container{
+        max-width: 720px;
+    }
+    .card-banner{
+        padding: 0px 75px;
+    }
+        
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+    h2{
+        font-size: 3vw;
+    }
+
+    .h2-subtitle{
+        font-size: 5vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 300px;
+    }
+    #search{
+        height: 200px;
+    }
+    .container{
+        max-width: 420px;
+    }
+    .card-banner{
+        padding: 0px 50px;
+    }
+
+    .btn-cac{
+        font-size: 1vh;
+    }
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footer a{
+        padding: 2px 0px;
+    }
+}
+
+
+/* Clase Nº6:PLAN DE ESTUDIOS: Grid. Implementación
+de Grid. Maquetado con Flex y Grid. */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;   
+    padding: 0px 50px;
+}
+
+.nav-links{
+    display: flex;
+    gap:30px;
+    list-style: none;
+}
+
+/* Centra el texto que info sobre películas 
+y series ilimitadas */
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Se agrega un scroll */
+.movies-scroller{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:0px 0px 40px 0px;
+}
+
+.movie-item-v2{
+    border-radius: 20px;
+    width: 170px;    
+    min-width: 170px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+    
+}
+
+
+.movie-item-detail-v2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.movies-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 20px;
+} 
+
+/* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+} 
+  
+/* Track */
+ ::-webkit-scrollbar-track {
+    background: var(--bg-input-color); 
+} 
+   
+/* Handle */
+ ::-webkit-scrollbar-thumb {
+    background: var(--third-color); 
+} 
+  
+/* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+    background: var(--third-bis-color); 
+}
+
+
+.d-form{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.d-iframe{
+    width: 100%;
+} 

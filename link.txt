@@ -1,1 +1,16 @@
 https://medicosdigitales.com.ar/
+
+getHolidaysByService(id: number){
+    const url = `${urlMainBack}/appointmentsManager/resources/getHolidaysByService/${id}`
+    return this.http.get<getHolidays>(url, this.headers)
+    .pipe(
+      map((resp) => {
+        const holidays: HolidayModel[] = resp.holidays.map(
+          (holiday:any) => ({id: holiday.id, schedule: holiday.schedule, service: holiday.service, startDate: holiday.startDate, endDate: holiday.endDate, reason: holiday.reason, hcLegacyUser: holiday.hcLegacyUser}));
+          console.log(resp)
+          return {
+          holidays
+        };
+      })
+    )
+  }

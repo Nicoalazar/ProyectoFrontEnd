@@ -1,4 +1,5 @@
 const autosImportados = require('./autos'); // Importar el módulo autos
+const persona = require('./persona'); // Importar el modulo persona
 
 // Objeto literal concesionaria con la lista de autos importada
 const concesionaria = {
@@ -70,14 +71,8 @@ module.exports = concesionaria;
 //  concesionaria.listaDeVentas();
 //  concesionaria.totalDeVentas();
 
-const persona = {
-    nombre: 'Juan',
-    capacidadDePagoEnCuotas: 20000,
-    capacidadDePagoTotal: 100000
-};
 
 const autoParaComprar = concesionaria.buscarAuto('JJK116');
-console.log(autoParaComprar);
 if (autoParaComprar) {
     concesionaria.puedeComprar(autoParaComprar, persona);
 } else {
